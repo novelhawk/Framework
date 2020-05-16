@@ -22,6 +22,8 @@ namespace Framework.Shaders
             return new Program(handle);
         }
 
+        public void Use() => Bind();
+        
         public void Bind()
         {
             GL.UseProgram(_handle);
@@ -84,7 +86,20 @@ namespace Framework.Shaders
             SetUniformValue(loc, ref data);
         }
         
+        public void SetUniformValue(string attrib, Matrix4 data)
+        {
+            var loc = GetUniformLocation(attrib);
+            if (loc < 0)
+                throw new GLException($"Could not find Uniform({attrib})");
+            SetUniformValue(loc, ref data);
+        }
+        
         public void SetUniformValue(int location, ref Matrix4 data)
+        {
+            GL.UniformMatrix4(location, false, ref data);
+        }
+        
+        public void SetUniformValue(int location, Matrix4 data)
         {
             GL.UniformMatrix4(location, false, ref data);
         }
