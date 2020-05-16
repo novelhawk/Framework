@@ -1,6 +1,6 @@
 using System;
 
-namespace Hawk.Framework.Exceptions
+namespace Framework.Exceptions
 {
     public class GLException : Exception
     {

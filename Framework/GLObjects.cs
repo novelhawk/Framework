@@ -1,7 +1,7 @@
 using System;
 using OpenToolkit.Graphics.OpenGL4;
 
-namespace Hawk.Framework
+namespace Framework
 {
     public class GLObjects
     {

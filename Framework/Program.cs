@@ -1,9 +1,9 @@
 ﻿using System;
-using Hawk.Framework.Exceptions;
+using Framework.Exceptions;
 using OpenToolkit.Graphics.OpenGL4;
 using OpenToolkit.Mathematics;
 
-namespace Hawk.Framework
+namespace Framework
 {
     public class Program : IDisposable
     {
