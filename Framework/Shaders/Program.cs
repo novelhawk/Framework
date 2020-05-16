@@ -3,7 +3,7 @@ using Framework.Exceptions;
 using OpenToolkit.Graphics.OpenGL4;
 using OpenToolkit.Mathematics;
 
-namespace Framework
+namespace Framework.Shaders
 {
     public class Program : IDisposable
     {

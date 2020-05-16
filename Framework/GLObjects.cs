@@ -5,11 +5,11 @@ namespace Framework
 {
     public class GLObjects
     {
-        private int _vertexBuffer = -1;
-        private int _elementBuffer = -1;
-        private int _colorBuffer = -1;
-        private int _textureBuffer = -1;
-        private int _vertexArray = -1;
+        private GLHandle _vertexBuffer = GLHandle.MinusOne;
+        private GLHandle _elementBuffer = GLHandle.MinusOne;
+        private GLHandle _colorBuffer = GLHandle.MinusOne;
+        private GLHandle _textureBuffer = GLHandle.MinusOne;
+        private GLHandle _vertexArray = GLHandle.MinusOne;
 
         public GLObjects()
         {
@@ -33,7 +33,7 @@ namespace Framework
         {
             get
             {
-                if (_vertexBuffer == -1)
+                if (_vertexBuffer == GLHandle.MinusOne)
                     throw new Exception("Accessing nonexistent buffer");
                 return _vertexBuffer;
             }
@@ -43,7 +43,7 @@ namespace Framework
         {
             get
             {
-                if (_colorBuffer == -1)
+                if (_colorBuffer == GLHandle.MinusOne)
                     throw new Exception("Accessing nonexistent buffer");
                 return _colorBuffer;
             }
@@ -53,7 +53,7 @@ namespace Framework
         {
             get
             {
-                if (_elementBuffer == -1)
+                if (_elementBuffer == GLHandle.MinusOne)
                     throw new Exception("Accessing nonexistent buffer");
                 return _elementBuffer;
             }
@@ -63,7 +63,7 @@ namespace Framework
         {
             get
             {
-                if (_textureBuffer == -1)
+                if (_textureBuffer == GLHandle.MinusOne)
                     throw new Exception("Accessing nonexistent buffer");
                 return _textureBuffer;
             }
@@ -73,7 +73,7 @@ namespace Framework
         {
             get
             {
-                if (_vertexArray == -1)
+                if (_vertexArray == GLHandle.MinusOne)
                     throw new Exception("Accessing nonexistent buffer");
                 return _vertexArray;
             }
@@ -81,27 +81,27 @@ namespace Framework
 
         public void CreateVertexBuffer()
         {
-            _vertexBuffer = GL.GenBuffer();
+            _vertexBuffer = (GLHandle) GL.GenBuffer();
         }
 
         public void CreateElementBuffer()
         {
-            _elementBuffer = GL.GenBuffer();
+            _elementBuffer = (GLHandle) GL.GenBuffer();
         }
 
         public void CreateColorBuffer()
         {
-            _colorBuffer = GL.GenBuffer();
+            _colorBuffer = (GLHandle) GL.GenBuffer();
         }
 
         public void CreateTextureBuffer()
         {
-            _textureBuffer = GL.GenBuffer();
+            _textureBuffer = (GLHandle) GL.GenBuffer();
         }
 
         public void CreateVertexArray()
         {
-            _vertexArray = GL.GenVertexArray();
+            _vertexArray = (GLHandle) GL.GenVertexArray();
         }
     }
 

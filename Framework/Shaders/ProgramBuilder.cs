@@ -5,7 +5,7 @@ using System.IO;
 using Framework.Exceptions;
 using OpenToolkit.Graphics.OpenGL4;
 
-namespace Framework
+namespace Framework.Shaders
 {
     public class ProgramBuilder
     {
