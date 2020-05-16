@@ -13,11 +13,6 @@ namespace Framework
 
         public GLHandle(int id)
         {
-#if DEBUG
-            if (id == 0)
-                throw new GLException("Handle was not created");
-#endif
-            
             _id = id;
         }
 
